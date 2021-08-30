@@ -1,0 +1,100 @@
+.contenedor-grid{
+    padding: 20px;
+    margin:auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 5px;
+    background: rgb(238, 238, 238);
+}
+.grid-layer-title{
+    grid-column: 2/4;
+    text-align: center;
+}
+.ladeboard{
+    text-align: center;
+    padding-top: 40px;
+    
+}
+.actual{
+    background-color: blue;
+}
+body{
+    background-color:rgb(97, 0, 153);
+}
+.grid-layer span{
+    width: 100%;
+    height: 100px;
+}
+#resetbtn{
+    background-color: lightblue;
+
+}
+#mostrar{
+    position: absolute;
+    width: 79%;
+    top: 130px;
+    height: 280px;
+    text-align: center;
+    padding-top: 150px;
+    font-size: 2em;
+    background-color: rgba(155, 155, 155, 0.671);
+}
+.grid-layer-title button:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+@media screen and (min-width:320px){
+    .contenedor-grid{
+        width: 100%;
+        padding:0;
+    }
+    #mostrar{
+        width: 96%;
+        top: 110px;
+        height: 408px;
+        padding-top:10px;
+        font-size: 1.5em;
+    }
+    .contenedor-grid{
+        grid-auto-rows: minmax(100px, auto);
+    }
+    .grid-layer{
+        border: 1px solid #CCC;
+        background-color: rgb(238, 238, 238);
+    }
+    .grid-layer-title{
+        text-align: center;
+        background-color: rgb(238, 238, 238);
+        font-size: 0.8em;
+        font-style: italic;
+    }
+    .grid-layer-title h2{
+        background-color: rgb(238, 238, 238);
+        
+    }
+    .grid-layer-title button{
+        background-color: rgb(0, 255, 85);
+        border: 2px solid rgb(0, 162, 255);
+        width: 30%;
+        height: 30px;
+        outline: none;
+        font-size: 1.2em;
+        font-style: italic;
+    }
+
+
+}
+@media screen and (min-width:420px){
+    .contenedor-grid{
+        width: 80%;
+    }
+    #mostrar{
+        width: 78%;
+    }
+}
+@media screen and (min-width:700px) {
+    #mostrar{
+        width: 79%;
+    }
+}
