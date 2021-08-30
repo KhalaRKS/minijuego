@@ -45,6 +45,7 @@ function start(valido) {
         ocultar.style.display = "none";
         console.log(ocultar);
         startcount++;
+        startbtn.innerHTML = 'Retry';
     }
 
 }
@@ -73,9 +74,6 @@ function setColor(numID,start) {
                 selector.style.backgroundColor = 'blue';
                 different = randomNumber;
                 elementScore.innerHTML=score++;
-                if(score > 0) {
-                    startbtn.innerHTML = 'Retry';
-                }
                 
             }
             else if (auxiliarSelector.id != numID){
