@@ -92,6 +92,7 @@ body{
     }
     #mostrar{
         width: 78%;
+        max-width: 1000px;
     }
 }
 @media screen and (min-width:700px) {

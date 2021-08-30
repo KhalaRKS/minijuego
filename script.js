@@ -8,28 +8,44 @@ var score = 0;
 var reset = 0;
 var selector = null;
 var verificar = []
+var validador = false;
 var ocultar = document.getElementById('mostrar');
 verificar = document.getElementsByClassName('btn');
 var element = document.getElementsByClassName ('btn');
 var auxiliarSelector = element[0].style.backgroundColor = 'transparent';
-console.log(typeof(auxiliarSelector));
-
 var startcount = 0;
-console.log(element[0].addEventListener("click", setColor(),false));
+var startbtn = document.getElementById('startbtn');
+
+console.log(typeof(auxiliarSelector));
 
 function start(valido) {
     console.log(valido);
+
+
     if(startcount>=1){
 
         reset++;
         score = 0;
-        elementScore = 0;
+        elementScore.innerHTML = 0;
         elementReset.innerHTML = reset
+        randomNumber = null;
+        different = -1;
+        contenedorScore ="";
+        elementScore = document.getElementById('score');
+        elementReset = document.getElementById('reset');
+        selector = null;
+        verificar = []
+        ocultar = document.getElementById('mostrar');
+        verificar = document.getElementsByClassName('btn');
+        auxiliarSelector.style.backgroundColor = "transparent";
+        auxiliarSelector = element[0].style.backgroundColor = 'transparent';
+        setColor(undefined,true);
+    }else if(valido){
+        setColor(undefined,valido);
+        ocultar.style.display = "none";
+        console.log(ocultar);
+        startcount++;
     }
-    setColor(undefined,valido);
-    ocultar.style.display = "none";
-    console.log(ocultar);
-    startcount++;
 
 }
 
@@ -53,9 +69,14 @@ function setColor(numID,start) {
             }else if (auxiliarSelector.id == numID){
                 auxiliarSelector.style.backgroundColor = "transparent";
                 auxiliarSelector = selector
+                selector.style.transition = "500ms"
                 selector.style.backgroundColor = 'blue';
                 different = randomNumber;
                 elementScore.innerHTML=score++;
+                if(score > 0) {
+                    startbtn.innerHTML = 'Retry';
+                }
+                
             }
             else if (auxiliarSelector.id != numID){
                 startcount = 0;
@@ -63,8 +84,9 @@ function setColor(numID,start) {
                 auxiliarSelector.style.cursor = "pointer";
                 ocultar.style.display = "block";
                 ocultar.innerHTML = "YOU LOOSE, YOUR SCORE WAS: "+ (score - 1);
-                ocultar.append(textnode)
+                score = 0;
             }
+
            // else if(auxiliarSelector.style.backgroundColor === 'blue'){
     
 
