@@ -64,12 +64,12 @@ function setColor(numID,start) {
                 ocultar.style.display = "block";
                 ocultar.innerHTML = "YOU LOOSE, YOUR SCORE WAS: "+ (score - 1);
                 ocultar.append(textnode)
-                setTimeout(() => {  reloadPage(); }, 2000);
             }
            // else if(auxiliarSelector.style.backgroundColor === 'blue'){
     
 
 }
+
 function reloadPage() {
     location.reload()
 }

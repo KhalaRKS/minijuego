@@ -88,12 +88,18 @@ body{
 @media screen and (min-width:420px){
     .contenedor-grid{
         width: 80%;
+        max-width: 1000px;
     }
     #mostrar{
         width: 78%;
     }
 }
 @media screen and (min-width:700px) {
+    #mostrar{
+        width: 79%;
+    }
+}
+@media screen and (min-width:800px) {
     #mostrar{
         width: 79%;
     }
